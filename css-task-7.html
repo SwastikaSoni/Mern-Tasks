@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS task-7</title>
+    <style>
+      .form{
+        background-color: #80002a;
+        width: 40%;
+        margin: 20px auto;
+        padding: 15px;
+      }
+      body{
+        color:white;
+        font-family:verdana;
+        margin: 20px;
+      }
+      table {
+        width: 65%;
+      }
+      table tr {
+        margin-bottom: 10px; /* Add space between rows */
+      }
+      .button-register {
+        background-color: white;
+        border: none;
+        color: black;
+        padding: 10px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        width: 100%;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .input-features {
+        height: 28px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        color:#ccc;
+        box-sizing: border-box;
+      }
+      select {
+        height: 30px;
+        width: 70%;
+      }
+    </style>
+</head>
+<body bgcolor=#cc0044>
+  <form class="form">
+    <center>
+      <table>
+        <tr>
+          <td style="padding:0 0 10px 0"><label for="fn">Name:  </label></td>
+          <td style="padding:0 0 10px 0"><input class="input-features" type="text" name="fn" Placeholder="your name" style="width: 85%;"/></td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0"><label for="ln">Email:  </label></td>
+          <td style="padding:0 0 10px 0"><input class="input-features" type="text" name="ln" Placeholder="your email" style="width: 85%;"></input></td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0"><label>Password:  </label></td>
+          <td style="padding:0 0 10px 0"><input class="input-features" type="password" style="width: 85%;"/></td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0"><label for="Phone_no">Phone Number:  </label></td>
+          <td style="padding:0 0 10px 0"><input class="input-features" type="text" name="Phone_no" style="width: 85%;"></input></td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0"><label for="gender">Gender:  </label></td>
+          <td style="padding:0 0 10px 0">Male: <input type="radio" name="gender"/>Female: <input type="radio" name="gender"/>Other: <input type="radio" name="gender"/></td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0"><label>Language:  </label></td>
+          <td style="padding:0 0 10px 0"><select>
+          <option>Select language </option>
+          <option>English</option>
+          <option>Hindi</option>
+          <option>Telugu</option>
+          <option>Others</option>
+          </select></td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0"><label for="zipcode">Zipcode:  </label></td>
+          <td style="padding:0 0 10px 0"><input class="input-features" type="text" name="zipcode" style="width: 85%;"></input></td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0"><label for="About">About:  </label>
+          </td>
+          <td style="padding:0 0 10px 0">
+            <textarea name="About" Placeholder="write about youself..." rows="3" style="width: 85%;"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0" colspan="2" align="center">
+            <input class="button-register" type="button" value="Register" />
+          </td>
+        </tr>
+      </table>
+      </center>
+  </form>
+</body>
+</html>

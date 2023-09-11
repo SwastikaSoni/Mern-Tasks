@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS task-2</title>
+    <style>
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        ul.navbar li {
+            float: left;
+        }
+
+        ul.navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul.navbar li a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .navbar-vertical {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #f29559;
+            width: 200px;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            bottom: 0;
+            overflow-y: auto;
+        }
+
+        .navbar-vertical li {
+            text-align: center;
+        }
+
+        .navbar-vertical li a {
+            display: block;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+
+        .navbar-vertical li a:hover {
+            background-color: #ff0559;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <li><a href="#">HOME</a></li>
+            <li class="dropdown">
+                <a href="#">Java</a>
+            </li>
+            <li class="dropdown">
+                <a href="#">HTML</a>
+            </li>
+            <li class="dropdown">
+                <a href="#">CSS</a>
+            </li>
+            <li class="dropdown">
+                <a href="#">Bootstrap</a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="navbar-vertical">
+        <li><a href="#">HOME</a></li>
+        <li class="dropdown">
+            <a href="#">Java</a>
+        </li>
+        <li class="dropdown">
+            <a href="#">HTML</a>
+        </li>
+        <li class="dropdown">
+            <a href="#">CSS</a>
+        </li>
+        <li class="dropdown">
+            <a href="#">Bootstrap</a>
+        </li>
+    </ul>
+</body>
+</html>
