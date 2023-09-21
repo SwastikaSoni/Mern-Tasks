@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>BS Task-5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cutive&family=Nunito:wght@300;400;800&family=Roboto+Slab:wght@100;200;400;800&family=Rokkitt:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style media="screen">
+    .form {
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .form label {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .icon-box-about {
+      display: inline-block;
+      background: #6c757d;
+      padding: 1.5px 1.5px 0 10px;
+      border-radius: 4px;
+    }
+
+    .icon-box {
+      display: inline-block;
+      background: #6c757d;
+      padding: 1.5px 1.5px 1.5px 10px;
+      border-radius: 4px;
+    }
+
+    .icon {
+      color: white;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .input-features,
+    .select-features,
+    .textarea-features {
+      border: 1px solid #ccc;
+      padding: 6px 10px;
+      width: 350px;
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    .input-features:focus,
+    .select-features:focus,
+    .textarea-features:focus {
+      border-color: #6c757d;
+    }
+
+    .form table {
+      padding: 20px;
+    }
+
+    .button-register {
+      background-color: orange;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Warning styles */
+    .warning {
+      border-color: #800000;
+      background-color: #ffb3b3;
+      color: #800000;
+    }
+
+    .warning-icon {
+      color: #800000;
+    }
+
+    .warning-box {
+      background: #ffb3b3;
+      border-color: #800000;
+    }
+
+    .warning-label {
+      color: #800000;
+    }
+  </style>
+</head>
+
+<body>
+  <form class="form">
+    <center>
+      <table>
+        <tr>
+          <td style="padding:0 0 10px 0"><label for="fn">First Name </label></td>
+          <td style="padding:0 0 10px 30px">
+            <div class="icon-box">
+              <i class="fa-solid fa-user icon"></i>
+              <input class="input-features" type="text" name="fn" Placeholder="First Name" onblur="validateInput(this)" />
+              <span class="warning-label"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0"><label for="ln">Last Name </label></td>
+          <td style="padding:0 0 10px 30px">
+            <div class="icon-box">
+              <i class="fa-solid fa-user icon"></i>
+              <input class="input-features" type="text" name="ln" Placeholder="Last Name" onblur="validateInput(this)" />
+              <span class="warning-label"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0"><label for="ln">Email </label></td>
+          <td style="padding:0 0 10px 30px">
+            <div class="icon-box">
+              <i class="fa-solid fa-envelope icon"></i>
+              <input class="input-features" type="text" name="ln" Placeholder="your email" onblur="validateInput(this)" />
+              <span class="warning-label"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0"><label for="Phone_no">Phone # </label></td>
+          <td style="padding:0 0 10px 30px">
+            <div class="icon-box">
+              <i class="fa-solid fa-phone icon"></i>
+              <input class="input-features" type="text" name="Phone_no" Placeholder="+91 123 456 7890" onblur="validateInput(this)" />
+              <span class="warning-label"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0"><label for="add">Address </label></td>
+          <td style="padding:0 0 10px 30px">
+            <div class="icon-box">
+              <i class="fa-solid fa-house icon"></i>
+              <input class="input-features" type="text" name="add" Placeholder="Address" onblur="validateInput(this)" />
+              <span class="warning-label"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0"><label for="city">City </label></td>
+          <td style="padding:0 0 10px 30px">
+            <div class="icon-box">
+              <i class="fa-solid fa-house icon"></i>
+              <input class="input-features" type="text" name="city" Placeholder="city" onblur="validateInput(this)" />
+              <span class="warning-label"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0"><label>State </label></td>
+          <td style="padding:0 0 10px 30px">
+            <div class="icon-box">
+              <i class="fa-solid fa-list icon"></i>
+              <select class="select-features" onblur="validateInput(this)">
+                <option>Please Select Your State </option>
+                <option>Jharkhand</option>
+                <option>Bihar</option>
+                <option>Delhi</option>
+                <option>Maharashtra</option>
+              </select>
+              <span class="warning-label"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0"><label for="gender">Do you have hosting </label></td>
+          <td style="padding:0 0 10px 30px">
+            <input type="radio" name="gender" /><label>No</label><br />
+            <input type="radio" name="gender" /><label>Yes</label>
+            <span class="warning-label"></span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0"><label for="About">Project Description </label></td>
+          <td style="padding:0 0 10px 30px">
+            <div class="icon-box-about">
+              <i class="fa-solid fa-pen icon"></i>
+              <textarea name="About" Placeholder="Project Description" rows="3" class="textarea-features" onblur="validateInput(this)"></textarea>
+              <span class="warning-label"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 10px 0" colspan="2" align="center">
+            <button class="button-register" onclick="validateForm()"><i class="fa-solid fa-paper-plane"></i> Send</button>
+          </td>
+        </tr>
+      </table>
+    </center>
+  </form>
+
+  <script>
+  function box(inputElement) {
+    inputElement.parentElement.classList.add("warning-box");
+  }
+
+  function icon(inputElement) {
+    inputElement.parentElement.querySelector(".icon").classList.add("warning-icon");
+  }
+
+  function removeBoxIcon(inputElement) {
+    inputElement.parentElement.classList.remove("warning-box");
+    inputElement.parentElement.querySelector(".icon").classList.remove("warning-icon");
+  }
+
+  function validateInput(inputElement) {
+    const placeholderText = inputElement.getAttribute("placeholder");
+    const warningLabel = inputElement.parentElement.querySelector(".warning-label");
+    if (inputElement.value.trim() === "") {
+      inputElement.classList.add("warning");
+      box(inputElement);
+      icon(inputElement);
+      warningLabel.textContent = "Please supply " + placeholderText + ".";
+    } else {
+      inputElement.classList.remove("warning");
+      removeBoxIcon(inputElement);
+      warningLabel.textContent = ""; // Clear the warning message
+    }
+  }
+
+  function validateForm() {
+    const inputs = document.querySelectorAll('.input-features, .select-features, .textarea-features');
+    inputs.forEach(function(input) {
+      validateInput(input);
+    });
+  }
+</script>
+
+</body>
+
+</html>

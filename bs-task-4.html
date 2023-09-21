@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS Task-4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive&family=Nunito:wght@300;400;800&family=Roboto+Slab:wght@100;200;400;800&family=Rokkitt:wght@200&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for the card */
+        .custom-card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .custom-card:hover {
+            transform: scale(1.05);
+        }
+        .custom-card:hover .card-one{
+          background-image: url('images/shoes.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        .custom-card:hover .card-two{
+          background-image: url('images/jewellry.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        .custom-card:hover .card-three{
+          background-image: url('images/clothes.jpeg');
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        .custom-card:hover .card-four{
+          background-image: url('images/hair.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        .card-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+        .custom-card .card-header {
+            background: linear-gradient(to bottom, #cc33ff 0%, #4d0066 100%);
+            transition: background-image 0.3s ease-in-out;
+            height: 250px;
+            text-align: center;
+            color: white;
+            font-size:2rem;
+            padding-top:50px;
+            font-family: 'Nunito', sans-serif;
+          }
+          .card-body{
+            height:200px;
+          }
+          .card-footer{
+            height:100px;
+          }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card custom-card">
+                    <div class="card-header card-one">
+                        MATERIAL CARD
+                    </div>
+                    <div class="card-body card-section">
+                        <p class="card-text">Cards for display in portfolio style material design by google</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card custom-card">
+                    <div class="card-header card-two">
+                        MATERIAL CARD
+                    </div>
+                    <div class="card-body card-section">
+                        <p class="card-text">Cards for display in portfolio style material design by google</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card custom-card">
+                    <div class="card-header card-three">
+                        MATERIAL CARD
+                    </div>
+                    <div class="card-body card-section">
+                        <p class="card-text">Cards for display in portfolio style material design by google</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card custom-card">
+                    <div class="card-header card-four">
+                        MATERIAL CARD
+                    </div>
+                    <div class="card-body card-section">
+                        <p class="card-text">Cards for display in portfolio style material design by google</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
