@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: white;
+        }
+
+        .form-signin {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-signin img {
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .form-floating {
+            margin-bottom: 15px;
+        }
+
+        .form-floating input {
+            width: 100%;
+        }
+
+        .form-check-label {
+            font-weight: 300;
+        }
+
+        .forgot {
+            float: right;
+        }
+
+        .btn-primary {
+            background-color: #405DE6;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #3a4ec4;
+        }
+
+        .warning {
+            border-color: red;
+        }
+
+        .error-message {
+            color: red;
+        }
+
+        .warning-weak {
+            color: red;
+        }
+
+        .warning-moderate {
+            color: yellow;
+        }
+
+        .warning-strong {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <main class="form-signin">
+        <form>
+            <img class="mb-4" src="images/instagram.png" alt="" width="200" height="150">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Username" onblur="validateUsername(this)" required>
+                <label for="floatingInput">Username</label>
+                <span class="error-message" id="usernameError"></span>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" onblur="validatePassword(this)" required>
+                <label for="floatingPassword">Password</label>
+                <span class="error-message" id="passwordError"></span>
+            </div>
+            <button class="btn btn-primary w-100 py-2" type="submit">Sign up</button>
+            <div class="form-check text-start my-3">
+                <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">Remember me</label>
+                <span><a class="forgot">Forgot Password?</a></span>
+            </div>
+        </form>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        function validateUsername(usernameInput) {
+            var username = usernameInput.value.trim();
+            var usernameError = document.getElementById("usernameError");
+
+            if (username === "") {
+                usernameInput.classList.add("warning");
+                usernameError.textContent = "Username is required";
+            } else if (!isValidEmail(username)) {
+                usernameInput.classList.add("warning");
+                usernameError.textContent = "Enter valid Username in format xyz@xyz";
+            } else {
+                usernameInput.classList.remove("warning");
+                usernameError.textContent = "";
+            }
+        }
+
+        function validatePassword(passwordInput) {
+            var password = passwordInput.value.trim();
+            var passwordError = document.getElementById("passwordError");
+
+            if (password === "") {
+                passwordInput.classList.add("warning");
+                passwordError.textContent = "Password is required";
+            } else if (password.length < 4) {
+                passwordInput.classList.add("warning-weak");
+                passwordError.textContent = "Weak";
+            } else if (password.length >= 4 && password.length < 7) {
+                passwordInput.classList.add("warning-moderate");
+                passwordError.textContent = "Moderate";
+            } else {
+                passwordInput.classList.add("warning-strong");
+                passwordError.textContent = "Strong";
+            }
+        }
+
+        function isValidEmail(email) {
+
+            return email.includes("@");
+        }
+    </script>
+</body>
+</html>

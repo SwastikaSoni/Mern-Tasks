@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GIF Control</title>
+</head>
+<body>
+    <h1>GIF Control</h1>
+    <p>
+      Click on the buttons to handle the animation
+    </p>
+    <img id="gif" src="images/gif.gif" alt="Animated GIF" style="display: none;">
+    <br>
+    <button id="startButton" onclick="startGif()">Start</button>
+    <button id="stopButton" onclick="stopGif()" disabled>Stop</button>
+
+    <script>
+        var gifElement = document.getElementById("gif");
+        var startButton = document.getElementById("startButton");
+        var stopButton = document.getElementById("stopButton");
+        var isPlaying = false;
+
+        function startGif() {
+            gifElement.style.display = "block";
+            startButton.disabled = true;
+            stopButton.disabled = false;
+            isPlaying = true;
+            gifElement.src = gifElement.src; // Restart the GIF
+        }
+
+        function stopGif() {
+            startButton.disabled = false;
+            stopButton.disabled = true;
+            isPlaying = false;
+            gifElement.style.display = "none";
+        }
+
+        gifElement.addEventListener("click", function () {
+            if (isPlaying) {
+                stopGif();
+            } else {
+                startGif();
+            }
+        });
+    </script>
+</body>
+</html>

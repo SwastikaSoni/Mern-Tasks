@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Task 4</title>
+</head>
+<body>
+
+<h1>Show Time and Date</h1>
+
+<button onclick="showTime()">Show Time</button>
+<button onclick="showDate()">Show Date</button>
+
+<p>Current Time:   <span id="timeResult"></span></p>
+
+<p>Current Date:   <span id="dateResult"></span></p>
+
+
+<script>
+    function showTime() {
+
+        var currentTime = new Date();
+        var timeString = currentTime.toLocaleTimeString();
+
+
+        document.getElementById("timeResult").textContent = timeString;
+    }
+
+    function showDate() {
+
+        var currentDate = new Date();
+        var dateString = currentDate.toLocaleDateString();
+
+
+        document.getElementById("dateResult").textContent = dateString;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>JS Task 5</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 300px;
+        }
+
+        .warning {
+            border-color: red;
+            border-width: 2.5px;
+        }
+
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <span>
+            <input type="text" name="name" onblur="validateInput(this, 'This field is required')" required>
+            <span class="error-message"></span>
+        </span><br /><br />
+        <label for="email">Email:</label>
+        <span>
+            <input type="email" name="email" onblur="validateEmail(this)" required>
+            <span class="error-message"></span>
+        </span><br /><br />
+        <label for="web">Website:</label>
+        <span>
+            <input type="text" name="web" onblur="validateURL(this)" required>
+            <span class="error-message"></span>
+        </span><br /><br />
+        <label for="mess">Message:</label>
+        <span>
+            <textarea name="mess" rows="5" cols="30" onblur="validateInput(this, 'This field is required')" required></textarea>
+            <span class="error-message"></span>
+        </span>
+    </form>
+    <script type="text/javascript">
+        function validateInput(inputElement, errorMessage) {
+            var value = inputElement.value.trim();
+            var errorMessageSpan = inputElement.nextElementSibling;
+
+            if (value === "") {
+                inputElement.classList.add("warning");
+                errorMessageSpan.textContent = errorMessage;
+            } else {
+                inputElement.classList.remove("warning");
+                errorMessageSpan.textContent = "";
+            }
+        }
+
+        function validateEmail(emailInput) {
+            var email = emailInput.value.trim();
+            var errorMessageSpan = emailInput.nextElementSibling;
+
+            if (email === "") {
+                emailInput.classList.add("warning");
+                errorMessageSpan.textContent = "This field is required";
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                emailInput.classList.add("warning");
+                errorMessageSpan.textContent = "A valid email is required";
+            } else {
+                emailInput.classList.remove("warning");
+                errorMessageSpan.textContent = "";
+            }
+        }
+
+        function validateURL(urlInput) {
+            var url = urlInput.value.trim();
+            var errorMessageSpan = urlInput.nextElementSibling;
+
+            if (url === "") {
+                urlInput.classList.add("warning");
+                errorMessageSpan.textContent = "This field is required";
+            } else if (!url.startsWith("www.")) {
+                urlInput.classList.add("warning");
+                errorMessageSpan.textContent = "A valid URL is required";
+            } else {
+                urlInput.classList.remove("warning");
+                errorMessageSpan.textContent = "";
+            }
+        }
+    </script>
+</body>
+</html>
