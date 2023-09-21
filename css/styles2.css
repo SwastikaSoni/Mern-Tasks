@@ -1,0 +1,156 @@
+body{
+  background-color: #bfbfbf;
+}
+
+/* #header section */
+.header{
+  font-family: 'Nunito', sans-serif;
+  background-color: 		#e6b800;
+  width: 90%;
+  height:auto;
+}
+
+.headerh1{
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 4rem;
+}
+
+.headercontent {
+  font-family: 'Nunito', sans-serif;
+  font-weight:300;
+}
+/* navbar section */
+.home{
+  color: 	#e6b800;
+}
+.navbar-custom{
+  width: 80%;
+  background-color: #151537;
+  margin-top: auto;
+  height: 70px;
+}
+.nav-link{
+  color: white;
+font-family: 'Nunito', sans-serif;
+}
+.nav-link:hover{
+  color: 	#e6b800;
+}
+.navbar-toggler{
+  color: white;
+}
+.btn{
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 0;
+}
+.btn:hover{
+  background-color:	#e6b800;
+  color: #151537;
+  border-color: 	#e6b800;
+}
+.dropdown-item{
+  color:white;
+  font-family: 'Nunito', sans-serif;
+}
+.dropdown-item:hover{
+  background-color: #313181;
+  color: white;
+}
+.navbar-dark .navbar-nav .nav-item.dropdown{
+  background-color: #151537;
+}
+.navbar-dark .navbar-nav .nav-item.dropdown .dropdown-menu {
+    background-color: #151537;
+    border-radius: 0;
+}
+/* content section */
+.content{
+  width:90%;
+}
+.content-box {
+  font-family: 'Nunito', sans-serif;
+      display: inline-block;
+      width: 33.1%;
+      background-color: #151537;
+      color: #e6b800;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content-box-middle {
+      background-color: 	#e6b800;
+      color:#151537;
+    }
+
+    .content-box h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .content-box p {
+      font-size: 1rem;
+    }
+    /* caraousel */
+    .carousel {
+      width:90%;
+      margin-top: 0;
+      position: relative;
+    }
+
+    .carousel-inner {
+      height: 600px;
+    }
+
+    .carousel-caption {
+      padding: 20px;
+      bottom: 220px;
+      left: 0;
+      width: 100%;
+      color: #fff;
+      text-align: center;
+      font-family: 'Nunito', sans-serif;
+      position: absolute;
+    }
+
+    .carousel-caption h4 {
+      font-weight: bold;
+      font-size: 1.7rem;
+      margin-bottom: 10px;
+    }
+
+    .carousel-caption h1 {
+      font-weight: bold;
+      font-size: 3.5rem;
+    }
+
+    .carousel-caption .btn {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
+      .headerh1 {
+        font-size: 1.5rem;
+      }
+
+      .headercontent {
+        font-size: 0.9rem;
+      }
+
+      .nav-link {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+      }
+
+      .btn {
+        font-size: 0.9rem;
+        margin-top: 5px;
+        padding: 5px 10px;
+      }
+
+      .content-box {
+        width: 100%;
+      }
+    }
